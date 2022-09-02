@@ -22,8 +22,7 @@ export class StudentUtilService {
   
         })
       };
-      //  const observable = this.httpClient.post<Student>(`${this.baseRoute}/students`, JSON.stringify(student));
-    //  const observable = this.httpClient.post(`${this.baseRoute}/students`,JSON.stringify(student),)
+      
       const observable = this.httpClient.post<Student>(`${this.baseRoute}/students`, JSON.stringify(student), httpOptions);
 
        return await firstValueFrom(observable);
