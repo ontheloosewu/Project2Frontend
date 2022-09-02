@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/models/student';
-import { StudentUtilService } from 'src/services/student-util.service';
+import { StudentUtilService } from 'src/app/services/student-util.service';
 
 @Component({
   selector: 'app-delete-student',
