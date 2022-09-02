@@ -8,6 +8,7 @@ import { DaycareHomeComponent } from './components/daycare-home';
 import { StudentUtilService } from './services/student-util.service';
 import { GradeUtilService } from './services/grade-util.service';
 import { AddStudentComponent } from './components/add-student';
+import { DeleteGradeComponent } from './components/delete-grade/delete-grade.component';
 
 
 
@@ -15,7 +16,9 @@ import { AddStudentComponent } from './components/add-student';
   declarations: [
     AppComponent,
     DaycareHomeComponent,
-    AddStudentComponent
+    AddStudentComponent,
+    DeleteGradeComponent
+
   ],
   imports: [
     BrowserModule,
