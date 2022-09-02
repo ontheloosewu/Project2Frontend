@@ -12,7 +12,8 @@ import { StudentUtilService } from './services/student-util.service';
 import { GradeUtilService } from './services/grade-util.service';
 import { AddStudentComponent } from './components/add-student';
 import { DeleteGradeComponent } from './components/delete-grade/delete-grade.component';
-
+import { ViewgradestableComponent } from './components/viewgradestable/viewgradestable.component';
+import { ViewgradespageComponent } from './components/viewgradespage/viewgradespage.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { DeleteGradeComponent } from './components/delete-grade/delete-grade.com
     GraderegistrationpageComponent,
     GraderegistrationformComponent,
     AddStudentComponent,
-    DeleteGradeComponent
+    DeleteGradeComponent,
+    ViewgradestableComponent,
+    ViewgradespageComponent
+
   ],
   imports: [
     BrowserModule,
