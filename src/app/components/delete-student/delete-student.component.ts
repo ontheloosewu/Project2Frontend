@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from 'src/app/models/student';
+import { GradeUtilService } from 'src/app/services/grade-util.service';
 import { StudentUtilService } from 'src/app/services/student-util.service';
 
 @Component({
@@ -22,7 +23,7 @@ export class DeleteStudentComponent implements OnInit {
   }
 
   async deleteStudent(){
+    await this.studentService.deleteAllGradesByStudentId(this.id);
     await this.studentService.deleteStudentById(this.id);
   }
-
 }
