@@ -1,4 +1,3 @@
-
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
@@ -24,7 +23,6 @@ export class StudentUtilService {
       };
       
       const observable = this.httpClient.post<Student>(`${this.baseRoute}/students`, JSON.stringify(student), httpOptions);
-
        return await firstValueFrom(observable);
     }
 }
