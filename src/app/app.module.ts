@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from  '@angular/common/http';
 import { DaycareHomeComponent } from './components/daycare-home';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
+import { GraderegistrationpageComponent } from './components/graderegistrationpage/graderegistrationpage.component';
+import { GraderegistrationformComponent } from './components/graderegistrationform/graderegistrationform.component';
+import { StudentUtilService } from './services/student-util.service';
+import { GradeUtilService } from './services/grade-util.service';
+import { AddStudentComponent } from './components/add-student';
+import { DeleteGradeComponent } from './components/delete-grade/delete-grade.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     DaycareHomeComponent,
-    DeleteStudentComponent
+    DeleteStudentComponent,
+    GraderegistrationpageComponent,
+    GraderegistrationformComponent,
+    AddStudentComponent,
+    DeleteGradeComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +30,7 @@ import { DeleteStudentComponent } from './components/delete-student/delete-stude
     FormsModule,
     HttpClientModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient, StudentUtilService, GradeUtilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
