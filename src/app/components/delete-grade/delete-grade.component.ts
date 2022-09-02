@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { Grade } from 'src/app/models/grade';
+import { GradeUtilService } from 'src/app/services/grade-util.service';
 
 @Component({
   selector: 'app-delete-grade',
@@ -11,15 +12,11 @@ import { Grade } from 'src/app/models/grade';
 export class DeleteGradeComponent{
 
 
-  constructor(private httpClient:HttpClient) {};
+  constructor(private gradeService:GradeUtilService) {};
 
-  gradename:string = "";
+  id:number = 0;
 
   async deleteGrade(){
-    const observable = this.httpClient.delete(`http://localhost:8080/grades/${this.gradename}`);
-    const body = await firstValueFrom(observable);
+    await this.gradeService.deleteGradeById(this.id);
   }
-
-  
-
 }
