@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from  '@angular/common/http';
 import { DaycareHomeComponent } from './components/daycare-home';
+import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DaycareHomeComponent
+    DaycareHomeComponent,
+    DeleteStudentComponent
   ],
   imports: [
     BrowserModule,
