@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Student } from 'src/app/models/student';
+import { StudentUtilService } from 'src/services/student-util.service';
 
 @Component({
   selector: 'app-delete-student',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteStudentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private studentService: StudentUtilService) { }
+
+  id: number = 0;
 
   ngOnInit(): void {
+  }
+
+  async getStudentById(){
+    const student: Student = await this.studentService.getStudentById(this.id);
+    console.log(student);
+  }
+
+  async deleteStudent(){
+    await this.studentService.deleteStudentById(this.id);
   }
 
 }

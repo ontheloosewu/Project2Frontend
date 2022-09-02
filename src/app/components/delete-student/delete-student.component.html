@@ -1,1 +1,7 @@
-<p>delete-student works!</p>
+<div>
+    <label for = "studentId">Id Input</label>
+    <input type = "text" name = "studentId" placeholder = "ID of Student" [(ngModel)] = "id">
+
+    <button (click) = "deleteStudent()">Remove Student</button>
+    <button (click) = "getStudentById()">Get Student</button>
+</div>
