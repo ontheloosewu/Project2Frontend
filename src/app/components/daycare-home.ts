@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
         <app-delete-grade></app-delete-grade>
         <add-student></add-student>
         <app-delete-student></app-delete-student>
-        
+        <app-viewgradespage></app-viewgradespage>
     `,
     selector: "daycare-home"
 })
