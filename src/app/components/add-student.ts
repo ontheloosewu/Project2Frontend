@@ -26,7 +26,10 @@ export class AddStudentComponent
 
     async createStudent()
     {
-        let student: Student = {"sId":0, "firstName":"test", "lastName":"Front", "guardianUsername":"End"};
+        let fName = this.firstName;
+        let lName = this.lastName;
+        let gMail = this.guardianEmail;
+        let student: Student = {sId:0, firstName:fName, lastName:lName, guardianUsername:gMail};
          let savedStudent = await this.studentService.registerStudent(student);
          console.log(savedStudent);
     }
