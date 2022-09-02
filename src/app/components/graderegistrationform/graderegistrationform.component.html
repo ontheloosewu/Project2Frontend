@@ -1,0 +1,24 @@
+<h3>Register Grade</h3>
+
+<div>
+    <fieldset>
+      <legend>Register Grade</legend>
+
+      <label for="inputStudentid">Student ID</label>
+      <input type="number" name="studentid" placeholder="Student ID #" [(ngModel)]= "studentId">
+
+      <label for="inputNote">Note</label>
+      <textarea rows="6" cols="50" placeholder="Anything of note student did" [(ngModel)]= "note"></textarea>
+
+      <label for="behavior-type">Behavior </label>
+      <select [(ngModel)]= "behavior">
+        <option value="EXCELLENT">Excellent</option>
+        <option value="SATISFACTORY">Satisfactory</option>
+        <option value="POOR">Poor</option>
+      </select>
+    </fieldset>
+</div>
+
+  <button (click)="register()">Register Grade</button>
+
+  <h4 *ngIf="savedId !== 0">Grade Registered with ID {{savedId}}</h4>
