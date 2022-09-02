@@ -22,4 +22,10 @@ export class GradeUtilService {
     const observable = this.http.delete(`http://localhost:8080/grades/${id}`, {responseType: 'text'});
     return await firstValueFrom(observable);
   }
+
+  async getAllGradesByStudentId(id:number):Promise<Grade[]>{
+    const observable = this.http.get<Grade[]>(`http://localhost:8080/grades/${id}`);
+    const grades = await firstValueFrom(observable);
+    return grades;
+  }
 }

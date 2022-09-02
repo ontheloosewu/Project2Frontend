@@ -1,6 +1,9 @@
-<!-- <h3>Grades</h3>
+<h3>Grades</h3>
 <h4 *ngIf="grades.length !== 0"></h4>
 
+<h4>Enter Student ID</h4>
+<input type="text" [(ngModel)]="id">
+<button (click)="retrieveGrades()">Retrieve Grades</button>
 <table>
   <thead>
     <tr>
@@ -21,4 +24,4 @@
       <td>{{g.behavior}}</td>
     </tr>
   </tbody>
-</table> -->
+</table>
