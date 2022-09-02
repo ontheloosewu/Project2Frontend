@@ -17,4 +17,9 @@ export class GradeUtilService {
     const savedGrade = await firstValueFrom(observable);
     return savedGrade;
   }
+
+  async deleteGradeById(id: number): Promise<String>{
+    const observable = this.http.delete(`http://localhost:8080/grades/${id}`, {responseType: 'text'});
+    return await firstValueFrom(observable);
+  }
 }
