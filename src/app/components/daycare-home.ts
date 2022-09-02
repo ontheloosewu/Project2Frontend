@@ -9,6 +9,7 @@ import { Component } from "@angular/core";
         <add-student></add-student>
         <app-delete-student></app-delete-student>
         <app-viewgradespage></app-viewgradespage>
+        <app-search-student></app-search-student>
     `,
     selector: "daycare-home"
 })
