@@ -15,6 +15,7 @@ import { DeleteGradeComponent } from './components/delete-grade/delete-grade.com
 import { ViewgradestableComponent } from './components/viewgradestable/viewgradestable.component';
 import { ViewgradespageComponent } from './components/viewgradespage/viewgradespage.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SearchStudentComponent } from './components/search-student/search-stude
     DeleteGradeComponent,
     ViewgradestableComponent,
     ViewgradespageComponent,
-    SearchStudentComponent
+    SearchStudentComponent,
+    NavbarComponent
 
   ],
   imports: [

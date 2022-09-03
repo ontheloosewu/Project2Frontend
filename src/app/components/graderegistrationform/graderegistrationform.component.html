@@ -1,6 +1,7 @@
-<h3>Register Grade</h3>
+
 
 <div>
+  <h3>Register Grade</h3>
     <fieldset>
       <legend>Register Grade</legend>
 
@@ -17,8 +18,9 @@
         <option value="POOR">Poor</option>
       </select>
     </fieldset>
-</div>
+
 
   <button (click)="register()">Register Grade</button>
 
   <h4 *ngIf="savedId !== 0">Grade Registered with ID {{savedId}}</h4>
+</div>
