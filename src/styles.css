@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.home-page, .create-student{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    max-width: 80%;
+}
+
+html{
+    background-color: darkslategray;
+    color: #fff;
+}

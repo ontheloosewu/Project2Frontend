@@ -5,14 +5,16 @@ import { Student } from "../models/student";
 
 @Component({
     template:`
-    <h4>Create new Student</h4>
-    <label for="firstNameInput">First Name</label>
-    <input name="firstNameInput" type="text" [(ngModel)] = "firstName" >
-    <label for="lastNameInput">Last Name</label>
-    <input name="lastNameInput" type="text" [(ngModel)] = "lastName" >
-    <label for="guardianInput">Guardian Email Address</label>
-    <input name="guardianInput" type="text" [(ngModel)] = "guardianEmail" >
-    <button (click)="createStudent()">Submit</button>
+    <div class="create-student">
+        <h4>Create new Student</h4>
+        <label for="firstNameInput">First Name</label>
+        <input name="firstNameInput" type="text" [(ngModel)] = "firstName" >
+        <label for="lastNameInput">Last Name</label>
+        <input name="lastNameInput" type="text" [(ngModel)] = "lastName" >
+        <label for="guardianInput">Guardian Email Address</label>
+        <input name="guardianInput" type="text" [(ngModel)] = "guardianEmail" >
+        <button (click)="createStudent()">Submit</button>
+    </div>
     `,
     selector: `add-student`
 })
