@@ -4,7 +4,7 @@
 <h4 *ngIf="grades.length !== 0"></h4>
 
 <h4>Enter Student ID</h4>
-<input type="text" [(ngModel)]="id">
+<select [(ngModel)]="id"><option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</option></select>
 <button (click)="retrieveGrades()">Retrieve Grades</button>
 <table>
   <thead>

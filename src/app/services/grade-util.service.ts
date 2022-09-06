@@ -16,6 +16,7 @@ export class GradeUtilService {
     const observable = this.http.post<Grade>("http://localhost:8080/grades",grade)
     const savedGrade = await firstValueFrom(observable);
     return savedGrade;
+
   }
 
   async deleteGradeById(id: number): Promise<String>{
