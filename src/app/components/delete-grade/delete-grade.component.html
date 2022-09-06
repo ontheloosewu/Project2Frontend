@@ -2,7 +2,8 @@
 <div>
 <p>Delete Grade</p>
 
-<input type="text" [(ngModel)]="id">
+<label for="gradeId">Enter Grade ID</label><br>
+<input name="gradeId" type="text" [(ngModel)]="id" />
 
 <button (click)="deleteGrade()">delete</button>
 </div>

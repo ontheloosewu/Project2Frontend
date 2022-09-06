@@ -1,7 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { firstValueFrom } from 'rxjs';
+import { catchError, firstValueFrom } from 'rxjs';
 import { Grade } from '../models/grade';
 
 @Injectable({
@@ -19,8 +19,13 @@ export class GradeUtilService {
   }
 
   async deleteGradeById(id: number): Promise<String>{
-    const observable = this.http.delete(`http://localhost:8080/grades/${id}`, {responseType: 'text'});
-    return await firstValueFrom(observable);
+    try{
+        const observable = this.http.delete(`http://localhost:8080/grades/${id}`, {responseType: 'text'});
+        return await firstValueFrom(observable);
+    }catch (error){
+      return "FAILURE";
+    }
+    
   }
 
   async getAllGradesByStudentId(id:number):Promise<Grade[]>{

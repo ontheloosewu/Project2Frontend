@@ -17,6 +17,12 @@ export class DeleteGradeComponent{
   id:number = 0;
 
   async deleteGrade(){
-    await this.gradeService.deleteGradeById(this.id);
+    const deleteGrades = await this.gradeService.deleteGradeById(this.id);
+    if(deleteGrades === "FAILURE"){
+      return alert("Grade does not exist");
+    } else{
+      alert("Grade deleted")
+      return deleteGrades ;
+    }
   }
 }
