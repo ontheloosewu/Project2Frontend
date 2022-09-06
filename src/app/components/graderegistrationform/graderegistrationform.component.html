@@ -5,7 +5,7 @@
     <fieldset>
       <legend>Register Grade</legend>
 
-      <label for="inputStudentid">Student ID</label>
+      <label for="inputStudentid">Student Name</label>
       <select [(ngModel)]="studentId"><option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</option></select>
 
       <label for="inputNote">Note</label>
