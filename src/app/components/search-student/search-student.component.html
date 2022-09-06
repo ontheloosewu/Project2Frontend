@@ -1,21 +1,57 @@
 
 <div>
-    <ul>
-        <li>
-            <label for="fname">First Name</label>
-            <input type = "text" [(ngModel)] = "fname"> 
-        </li>
-        <li>
-            <label for="lname">Last Name</label>
-            <input type = "text" [(ngModel)] = "lname">
-        </li>
-        <li>
-            <button (click)="searchByName()">Search</button>
-        </li>
+        <label for="fname">First Name &nbsp;&nbsp;&nbsp;</label>
+        <input type = "text" [(ngModel)] = "fname" (keyup)="onKeySearch($event)"> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <label for="lname">Last Name &nbsp;&nbsp;&nbsp;</label>
+        <input type = "text" [(ngModel)] = "lname" (keyup)="onKeySearch($event)">
+        
+        <br><br>
+        <div *ngIf="filtered.length > 0; then filtered_list else all">
+        </div>
 
-    </ul>
-    
+        <ng-template #filtered_list>
 
-    
-    
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Guardian Email</th>
+                        <th>View Grades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of filtered">
+                        <td>{{t.firstName}}</td>
+                        <td>{{t.lastName}}</td>
+                        <td>{{t.guardianUsername}}</td>
+                        <td> <button (click)="viewGrades()">View grades</button> </td>
+                    </tr>
+                </tbody>
+        </table>
+
+        </ng-template>
+
+        <ng-template #all>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Guardian Email</th>
+                        <th>View Grades</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let t of students">
+                        <td>{{t.firstName}}</td>
+                        <td>{{t.lastName}}</td>
+                        <td>{{t.guardianUsername}}</td>
+                        <td> <button (click)="viewGrades()">View grades</button> </td>
+                    </tr>
+                </tbody>
+        </table>
+        </ng-template>    
 </div>
+
