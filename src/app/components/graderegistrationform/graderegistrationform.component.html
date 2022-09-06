@@ -6,7 +6,7 @@
       <legend>Register Grade</legend>
 
       <label for="inputStudentid">Student ID</label>
-      <input type="number" name="studentid" placeholder="Student ID #" [(ngModel)]= "studentId">
+      <select [(ngModel)]="studentId"><option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</option></select>
 
       <label for="inputNote">Note</label>
       <textarea rows="6" cols="50" placeholder="Anything of note student did" [(ngModel)]= "note"></textarea>
@@ -22,5 +22,5 @@
 
   <button (click)="register()">Register Grade</button>
 
-  <h4 *ngIf="savedId !== 0">Grade Registered with ID {{savedId}}</h4>
-</div>
+<h4>Grade Registered with ID {{savedId}}</h4>
+
