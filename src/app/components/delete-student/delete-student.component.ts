@@ -12,18 +12,20 @@ export class DeleteStudentComponent implements OnInit {
 
   constructor(private studentService: StudentUtilService) { }
 
-  id: number = 0;
+  students: Student[] = [];
 
   ngOnInit(): void {
+    (async () => { 
+      this.students = await this.studentService.getAllStudents();
+    })();
   }
 
-  async getStudentById(){
-    const student: Student = await this.studentService.getStudentById(this.id);
-    console.log(student);
-  }
-
-  async deleteStudent(){
-    await this.studentService.deleteAllGradesByStudentId(this.id);
-    await this.studentService.deleteStudentById(this.id);
+  async deleteStudent(id: number){
+    if(confirm('Are you sure you want to remove this student?\nAll associating grades will also be deleted.')){
+      await this.studentService.deleteAllGradesByStudentId(id);
+      await this.studentService.deleteStudentById(id);
+      alert('Student and associated grades have been deleted');
+      this.students = await this.studentService.getAllStudents();
+    }
   }
 }
