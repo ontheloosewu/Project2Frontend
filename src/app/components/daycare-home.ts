@@ -1,10 +1,15 @@
 import { Component } from "@angular/core";
 
+
 @Component({
     template: `
         <div class="home-page">
             <h1>Home Page</h1>
         </div>
+        
+        <mat-card class="example-card">
+ 
+
         <!-- <app-graderegistrationform></app-graderegistrationform>
         <app-delete-grade></app-delete-grade>
         <add-student></add-student>

@@ -18,6 +18,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginUtilService } from './services/login-util.service';
 import { AddStudentComponent } from './components/add-student/add-student.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -32,14 +35,18 @@ import { AddStudentComponent } from './components/add-student/add-student.compon
     SearchStudentComponent,
     NavbarComponent,
     LoginComponent,
-    AddStudentComponent
-
+    AddStudentComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
+    
   ],
   providers: [HttpClient, StudentUtilService, GradeUtilService, LoginUtilService],
   bootstrap: [AppComponent]
