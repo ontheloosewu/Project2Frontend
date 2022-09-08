@@ -16,6 +16,8 @@ import { ViewgradestableComponent } from './components/viewgradestable/viewgrade
 import { ViewgradespageComponent } from './components/viewgradespage/viewgradespage.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginUtilService } from './services/login-util.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ViewgradestableComponent,
     ViewgradespageComponent,
     SearchStudentComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent
 
   ],
   imports: [
@@ -38,7 +41,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [HttpClient, StudentUtilService, GradeUtilService],
+  providers: [HttpClient, StudentUtilService, GradeUtilService, LoginUtilService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

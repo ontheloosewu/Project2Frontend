@@ -4,6 +4,7 @@ import { AddStudentComponent } from './components/add-student';
 import { DaycareHomeComponent } from './components/daycare-home';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 import { GraderegistrationpageComponent } from './components/graderegistrationpage/graderegistrationpage.component';
+import { LoginComponent } from './components/login/login.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
 import { ViewgradespageComponent } from './components/viewgradespage/viewgradespage.component';
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:"search-student",component:SearchStudentComponent},
   {path:"view-grades-page",component:ViewgradespageComponent},
   {path:"add-student", component:AddStudentComponent},
+  {path:"login", component:LoginComponent}
 ];
 
 @NgModule({
