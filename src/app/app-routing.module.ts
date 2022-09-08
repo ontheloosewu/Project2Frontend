@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddStudentComponent } from './components/add-student';
+import { AddStudentComponent } from './components/add-student/add-student.component';
+
 import { DaycareHomeComponent } from './components/daycare-home';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 import { GraderegistrationpageComponent } from './components/graderegistrationpage/graderegistrationpage.component';

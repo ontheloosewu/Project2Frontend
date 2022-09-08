@@ -10,7 +10,6 @@ import { GraderegistrationpageComponent } from './components/graderegistrationpa
 import { GraderegistrationformComponent } from './components/graderegistrationform/graderegistrationform.component';
 import { StudentUtilService } from './services/student-util.service';
 import { GradeUtilService } from './services/grade-util.service';
-import { AddStudentComponent } from './components/add-student';
 import { DeleteGradeComponent } from './components/delete-grade/delete-grade.component';
 import { ViewgradestableComponent } from './components/viewgradestable/viewgradestable.component';
 import { ViewgradespageComponent } from './components/viewgradespage/viewgradespage.component';
@@ -18,6 +17,7 @@ import { SearchStudentComponent } from './components/search-student/search-stude
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { LoginUtilService } from './services/login-util.service';
+import { AddStudentComponent } from './components/add-student/add-student.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +26,13 @@ import { LoginUtilService } from './services/login-util.service';
     DeleteStudentComponent,
     GraderegistrationpageComponent,
     GraderegistrationformComponent,
-    AddStudentComponent,
     DeleteGradeComponent,
     ViewgradestableComponent,
     ViewgradespageComponent,
     SearchStudentComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    AddStudentComponent
 
   ],
   imports: [
