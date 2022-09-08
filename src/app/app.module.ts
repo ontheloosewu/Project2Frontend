@@ -39,7 +39,8 @@ import { AddStudentComponent } from './components/add-student/add-student.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [HttpClient, StudentUtilService, GradeUtilService, LoginUtilService],
   bootstrap: [AppComponent]
