@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 
+
 @Component({
     template: `
         <div class="home-page">
@@ -7,6 +8,7 @@ import { Component } from "@angular/core";
             <h3>With great power comes great babysitting ability</h3>
         </div>
 
+    
         <div class = "reviews">
             <h2>Reviews</h2>
         </div>
@@ -18,6 +20,7 @@ import { Component } from "@angular/core";
             <p>Storm: It's the destiny of great teachers to see these kids grow!</p>
             <p>Batman: I'm Batman</p>
         </div>
+
 
         <!-- <app-graderegistrationform></app-graderegistrationform>
         <app-delete-grade></app-delete-grade>

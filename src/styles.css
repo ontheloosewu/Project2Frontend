@@ -1,6 +1,7 @@
 @import url('http://fonts.cdnfonts.com/css/international-super-hero');
 
 /* You can add global styles to this file, and also import other style files */
+@import url('http://fonts.cdnfonts.com/css/international-super-hero');
 .home-page, .create-student{
     text-align: center;
     margin-left: auto;
@@ -29,6 +30,7 @@ html{
     color: #fff;
 }
 
+
 fieldset{
   font-size: 1em;
 }
@@ -40,3 +42,4 @@ h1{
 h3{
   font-size: 1em;
 }
+
