@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/international-super-hero');
+
 /* You can add global styles to this file, and also import other style files */
 @import url('http://fonts.cdnfonts.com/css/international-super-hero');
 .home-page, .create-student{
@@ -8,25 +10,36 @@
     max-width: 80%;
 }
 
+.reviews, .create-student{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  max-width: 80%;
+}
+
+*{
+  font-family: 'International Super Hero Light', sans-serif;
+  font-size: 1em;
+  letter-spacing: 3px;
+}
+
+
 html{
     background-color: darkslategray;
     color: #fff;
 }
 
-/* *{
-    font-family: 'International Super Hero', sans-serif;
-} */
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+fieldset{
+  font-size: 1em;
+}
 
-.example-card {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+h1{
+  font-size: 2em;
+}
+
+h3{
+  font-size: 1em;
+}
+

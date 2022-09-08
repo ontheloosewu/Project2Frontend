@@ -46,7 +46,7 @@ import { MatButtonModule } from "@angular/material/button";
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule
-    
+
   ],
   providers: [HttpClient, StudentUtilService, GradeUtilService, LoginUtilService],
   bootstrap: [AppComponent]
