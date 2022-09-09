@@ -1,9 +1,16 @@
 
+h1{
+    font-size: 3em;
+}
+h3{
+    font-size: 1.5em;
+    font-style: italic;
+}
 .home-page{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 300px;
+    margin-top: 150px;
     max-width: 80%;
 }
 
@@ -21,6 +28,7 @@ mat-card{
 
 
 .wrapper {  
+    margin-top: 5%;
     margin-bottom: 10%;
     width: fit-content;
     margin-left: auto;

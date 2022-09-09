@@ -4,14 +4,18 @@
 
     <ul>
         <li>
-            <label for="">Username</label>
-            <input type="text" [(ngModel)]="username">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input matInput type="text" [(ngModel)]="username">
+            </mat-form-field>
         </li>
         <li>
-            <label for="">Password</label>
-            <input type="password" [(ngModel)]="password">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="password">Password</mat-label>
+                <input matInput type="password" [(ngModel)]="password">
+            </mat-form-field>
         </li>
     </ul>
 
-<button (click) = "loginUser()">Login</button>
+<button mat-raised-button (click) = "loginUser()">Login</button>
 </div>
