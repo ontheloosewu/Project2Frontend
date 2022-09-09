@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClient, HttpClientModule } from  '@angular/common/http';
-import { DaycareHomeComponent } from './components/daycare-home';
 import { DeleteStudentComponent } from './components/delete-student/delete-student.component';
 import { GraderegistrationpageComponent } from './components/graderegistrationpage/graderegistrationpage.component';
 import { GraderegistrationformComponent } from './components/graderegistrationform/graderegistrationform.component';
@@ -21,11 +20,11 @@ import { AddStudentComponent } from './components/add-student/add-student.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DaycareHomeComponent,
     DeleteStudentComponent,
     GraderegistrationpageComponent,
     GraderegistrationformComponent,
@@ -36,6 +35,7 @@ import { MatButtonModule } from "@angular/material/button";
     NavbarComponent,
     LoginComponent,
     AddStudentComponent,
+    HomeComponent,
     
   ],
   imports: [

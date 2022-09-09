@@ -1,2 +1,14 @@
 
 
+legend{
+    font-size: 2em;
+}
+
+div{
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+button{
+    font-size: 3em;
+}
