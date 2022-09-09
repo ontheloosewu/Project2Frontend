@@ -23,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { EpochPipe } from './pipes/epoch.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { MatSelectModule } from '@angular/material/select';
     LoginComponent,
     AddStudentComponent,
     HomeComponent,
+    EpochPipe,
     
   ],
   imports: [
