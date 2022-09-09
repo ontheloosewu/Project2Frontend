@@ -19,7 +19,10 @@ import { AddStudentComponent } from './components/add-student/add-student.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from "@angular/material/button";
+import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,10 @@ import { HomeComponent } from './components/home/home.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
 
   ],
   providers: [HttpClient, StudentUtilService, GradeUtilService, LoginUtilService],

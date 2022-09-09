@@ -2,6 +2,9 @@ div{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 300px;
+    margin-top: 150px;
     max-width: 60%;
+}
+h1{
+    font-size: 3em;
 }

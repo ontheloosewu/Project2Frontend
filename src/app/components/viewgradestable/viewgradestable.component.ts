@@ -32,4 +32,6 @@ export class ViewgradestableComponent implements OnInit {
     alert("Grade deleted");
     this.retrieveGrades();
   }
+
 }
+

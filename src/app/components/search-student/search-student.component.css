@@ -1,6 +1,6 @@
 div{
     text-align: center;
-    margin-top: 300px;
+    margin-top: 150px;
 }
 
 
@@ -29,3 +29,9 @@ td{
 label, input{
     font-size: 2em;
 }
+.example-full-width {
+    min-width: 100px;
+    max-width: 400px;
+    width: 100%;
+    
+  }

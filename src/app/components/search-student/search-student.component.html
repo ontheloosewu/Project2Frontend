@@ -2,11 +2,26 @@
 <div>
 
     <h1>Search Students</h1>
-        <label for="fname">First Name &nbsp;&nbsp;&nbsp;</label>
-        <input type = "text" [(ngModel)] = "fname" (keyup)="onKeySearch($event)"> <br>
+
+    <ul>
+        <li>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="fname">First Name &nbsp;&nbsp;&nbsp;</mat-label>
+                <input matInput type = "text" [(ngModel)] = "fname" (keyup)="onKeySearch($event)">
+            </mat-form-field>
+        </li>
+
+        <li>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="lname">Last Name &nbsp;&nbsp;&nbsp;</mat-label>
+                <input matInput type = "text" [(ngModel)] = "lname" (keyup)="onKeySearch($event)">
+            </mat-form-field>
+        </li>
+
+    </ul>
         
-        <label for="lname">Last Name &nbsp;&nbsp;&nbsp;</label>
-        <input type = "text" [(ngModel)] = "lname" (keyup)="onKeySearch($event)">
+        
+        
         
         <br><br>
         <div *ngIf="filtered.length > 0; then filtered_list else all">
@@ -28,7 +43,7 @@
                         <td>{{t.firstName}}</td>
                         <td>{{t.lastName}}</td>
                         <td>{{t.guardianUsername}}</td>
-                        <td> <button (click)="viewGrades()">View grades</button> </td>
+                        <td> <button mat-raised-button (click)="viewGrades()">View grades</button> </td>
                     </tr>
                 </tbody>
         </table>
@@ -50,7 +65,7 @@
                         <td>{{t.firstName}}</td>
                         <td>{{t.lastName}}</td>
                         <td>{{t.guardianUsername}}</td>
-                        <td> <button (click)="viewGrades()">View grades</button> </td>
+                        <td> <button mat-raised-button (click)="viewGrades()">View grades</button> </td>
                     </tr>
                 </tbody>
         </table>
