@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppUser } from 'src/app/models/appuser';
 import { LoginUtilService } from 'src/app/services/login-util.service';
 
 @Component({
@@ -17,11 +18,12 @@ export class LoginComponent implements OnInit {
   }
 
   async loginUser(){
-    const jwt = await this.loginService.validateLogin(this.username, this.password);
-    if(jwt === "FAILURE"){
+    const user = await this.loginService.validateLogin(this.username, this.password);
+    if(user.jwt === ""){
       return alert('Failed to login');
     } else {
-      localStorage.setItem("userInfo", jwt);
+      localStorage.setItem("userRole", user.role);
+      localStorage.setItem("userJWT", user.jwt);
       alert('Successful login');
     }
   }

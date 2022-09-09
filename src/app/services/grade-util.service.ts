@@ -22,8 +22,12 @@ export class GradeUtilService {
   // gets user info from local storage if it exists. otherwise returns empty string
   getJWT():string 
   {
-    let jwt = localStorage.getItem("userInfo");
-    return jwt ? jwt:"";
+    let jwt = localStorage.getItem("userJWT");
+
+    if (jwt === null)
+      return "";
+      
+    return jwt;
   }
 
   async registerGrade(grade:Grade):Promise<Grade>{
