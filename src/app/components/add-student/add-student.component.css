@@ -8,6 +8,7 @@ div{
 
 h1{
     font-size: 3em;
+    color: #2c1320;
 }
 ul{
     margin-left: auto;
@@ -23,5 +24,12 @@ ul{
 
 
 button{
-    font-size: 2em;
+    font-size: 2.5em;
+    min-width: 100px;
+    max-width: 300px;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #2c1320;
+    color: #8797af;
 }
