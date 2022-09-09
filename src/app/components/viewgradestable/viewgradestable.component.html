@@ -3,6 +3,7 @@
 <h4 *ngIf="grades.length !== 0"></h4>
 
 <h4>Select Student</h4>
+
 <ul>
   <li>
     <mat-form-field class="example-full-width" appearance="fill">
@@ -15,12 +16,9 @@
 
 </ul>
 
-
 <table>
   <thead>
     <tr>
-      <th>Grade ID</th>
-      <th>Student ID</th>
       <th>Date</th>
       <th>Note</th>
       <th>Behavior</th>
@@ -30,8 +28,6 @@
 
   <tbody>
     <tr *ngFor= "let g of grades">
-      <td>{{g.gId}}</td>
-      <td>{{g.sId}}</td>
       <td>{{g.timeReported}}</td>
       <td>{{g.note}}</td>
       <td>{{g.behavior}}</td>
