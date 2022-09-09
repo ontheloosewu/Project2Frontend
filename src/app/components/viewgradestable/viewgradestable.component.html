@@ -2,7 +2,7 @@
 <div>
 <h4 *ngIf="grades.length !== 0"></h4>
 
-<h4>Enter Student ID</h4>
+<h4>Select Student</h4>
 <ul>
   <li>
     <mat-form-field class="example-full-width" appearance="fill">
@@ -24,6 +24,7 @@
       <th>Date</th>
       <th>Note</th>
       <th>Behavior</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -34,7 +35,9 @@
       <td>{{g.timeReported}}</td>
       <td>{{g.note}}</td>
       <td>{{g.behavior}}</td>
+      <td><button mat-raised-button (click)="deleteGrade(g.gId)">Delete</button></td>
     </tr>
   </tbody>
 </table>
 </div>
+
