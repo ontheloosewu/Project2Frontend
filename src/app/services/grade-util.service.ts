@@ -24,7 +24,6 @@ export class GradeUtilService {
   {
     let jwt = localStorage.getItem("userInfo");
     return jwt ? jwt:"";
-
   }
 
   async registerGrade(grade:Grade):Promise<Grade>{
@@ -36,13 +35,8 @@ export class GradeUtilService {
   }
 
   async deleteGradeById(id: number): Promise<String>{
-    try{
-        const observable = this.http.delete<string>(`http://localhost:8080/grades/${id}`, this.httpOptions);
-        return await firstValueFrom(observable);
-    }catch (error){
-      return "FAILURE";
-    }
-    
+    const observable = this.http.delete<string>(`http://localhost:8080/grades/${id}`, this.httpOptions);
+    return await firstValueFrom(observable);
   }
 
   async getAllGradesByStudentId(id:number):Promise<Grade[]>{

@@ -26,4 +26,10 @@ export class ViewgradestableComponent implements OnInit {
   async retrieveGrades(){
     this.grades = await this.gradeService.getAllGradesByStudentId(this.id);
   }
+
+  async deleteGrade(id: number){
+    await this.gradeService.deleteGradeById(id);
+    alert("Grade deleted");
+    this.retrieveGrades();
+  }
 }
