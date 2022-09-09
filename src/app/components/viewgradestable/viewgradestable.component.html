@@ -2,27 +2,25 @@
 <div>
 <h4 *ngIf="grades.length !== 0"></h4>
 
-<h4>Enter Student ID</h4>
+<h4>Select Student</h4>
 <select [(ngModel)]="id"><option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</option></select>
 <button (click)="retrieveGrades()">Retrieve Grades</button>
 <table>
   <thead>
     <tr>
-      <th>Grade ID</th>
-      <th>Student ID</th>
       <th>Date</th>
       <th>Note</th>
       <th>Behavior</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
   <tbody>
     <tr *ngFor= "let g of grades">
-      <td>{{g.gId}}</td>
-      <td>{{g.sId}}</td>
       <td>{{g.timeReported}}</td>
       <td>{{g.note}}</td>
       <td>{{g.behavior}}</td>
+      <td><button (click)="deleteGrade(g.gId)">Delete</button></td>
     </tr>
   </tbody>
 </table>

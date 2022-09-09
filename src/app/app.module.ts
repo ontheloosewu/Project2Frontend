@@ -9,7 +9,6 @@ import { GraderegistrationpageComponent } from './components/graderegistrationpa
 import { GraderegistrationformComponent } from './components/graderegistrationform/graderegistrationform.component';
 import { StudentUtilService } from './services/student-util.service';
 import { GradeUtilService } from './services/grade-util.service';
-import { DeleteGradeComponent } from './components/delete-grade/delete-grade.component';
 import { ViewgradestableComponent } from './components/viewgradestable/viewgradestable.component';
 import { ViewgradespageComponent } from './components/viewgradespage/viewgradespage.component';
 import { SearchStudentComponent } from './components/search-student/search-student.component';
@@ -28,7 +27,6 @@ import { HomeComponent } from './components/home/home.component';
     DeleteStudentComponent,
     GraderegistrationpageComponent,
     GraderegistrationformComponent,
-    DeleteGradeComponent,
     ViewgradestableComponent,
     ViewgradespageComponent,
     SearchStudentComponent,
