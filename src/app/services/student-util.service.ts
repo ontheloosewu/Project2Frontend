@@ -13,7 +13,7 @@ export class StudentUtilService {
 
   constructor(private http:HttpClient){};
 
-    private baseRoute : string = "http://localhost:8080"
+    private baseRoute : string = "https://daycare-app.agreeablemushroom-6e40775d.eastus.azurecontainerapps.io";
     private httpOptions = 
     {
       headers: new HttpHeaders({
@@ -41,13 +41,13 @@ export class StudentUtilService {
     }
 
     async getStudentById(id: number): Promise<Student>{
-      const observable = this.http.get<Student>(`http://localhost:8080/students/${id}`, this.httpOptions);
+      const observable = this.http.get<Student>(`${this.baseRoute}/students/${id}`, this.httpOptions);
       const retrievedStudent = await firstValueFrom(observable);
       return retrievedStudent;
     }
 
     async deleteStudentById(id: number): Promise<string>{
-      const observable = this.http.delete<string>(`http://localhost:8080/students/${id}`, this.httpOptions);
+      const observable = this.http.delete<string>(`${this.baseRoute}/students/${id}`, this.httpOptions);
       return await firstValueFrom(observable);
     }
 
