@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppUser } from 'src/app/models/appuser';
 import { LoginUtilService } from 'src/app/services/login-util.service';
 
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   username:String = "";
   password:String = "";
 
-  constructor(private loginService:LoginUtilService) { }
+  constructor(private loginService:LoginUtilService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +25,8 @@ export class LoginComponent implements OnInit {
     } else {
       localStorage.setItem("userRole", user.role);
       localStorage.setItem("userJWT", user.jwt);
-      alert('Successful login');
+      // alert('Successful login');
+      this.router.navigateByUrl('/home');
     }
   }
 

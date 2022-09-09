@@ -48,7 +48,6 @@ export class SearchStudentComponent implements OnInit {
       }
       this.filtered.push(student);
     }
-    console.log(this.filtered);
   }
 
   viewGrades()

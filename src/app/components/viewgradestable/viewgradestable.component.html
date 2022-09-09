@@ -7,11 +7,11 @@
 <ul>
   <li>
     <mat-form-field class="example-full-width" appearance="fill">
-    <mat-select [(ngModel)]="id"><mat-option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</mat-option></mat-select>
+    <mat-select [(ngModel)]="id" (ngModelChange)="retrieveGrades()" ><mat-option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</mat-option></mat-select>
     </mat-form-field>
   </li>
   <li>
-    <button mat-raised-button (click)="retrieveGrades()">Retrieve Grades</button>
+    <!-- <button mat-raised-button (click)="retrieveGrades()">Retrieve Grades</button> -->
   </li>
 
 </ul>
