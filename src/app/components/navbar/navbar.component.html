@@ -10,7 +10,7 @@
         <li *ngIf="(this.role === 'teacher' || this.role === 'guardian')"><a mat-button routerLink="/search-student">Search Student</a></li>
         <li *ngIf="this.role === 'teacher'"><a mat-button routerLink="/delete-student">Delete Student</a></li>
         <li *ngIf="this.role === 'teacher'"><a mat-button routerLink="/grade-registration-page">Create Grade</a></li>
-        <li *ngIf="(this.role === 'teacher' || this.role === 'guardian')"><a mat-button routerLink="/view-grades-page">View Grades Page</a></li>
+        <li *ngIf="(this.role === 'teacher' || this.role === 'guardian')"><a mat-button routerLink="/view-grades-page">View Grades</a></li>
         <li *ngIf="this.role === ''"><a mat-button routerLink="/login">Login</a></li>
         <li *ngIf="this.role !== ''"><a mat-button routerLink="/logout">Logout</a></li>
     </ul>
