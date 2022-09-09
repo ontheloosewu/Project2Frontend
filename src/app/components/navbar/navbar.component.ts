@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { 
+    router.events.subscribe((val) =>
+    {
+      this.checkRole();
+    });
+  }
+ 
+  public role :string = "";
+
+  checkRole(): void
+  {
+    let r = localStorage.getItem("userRole");
+
+    this.role = r?r : "";
+  }
 
   ngOnInit(): void {
+
+    
   }
 
 }
