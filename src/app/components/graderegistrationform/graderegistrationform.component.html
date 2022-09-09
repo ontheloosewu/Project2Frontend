@@ -1,49 +1,37 @@
+<fieldset>
+<legend>Register Grade</legend>
+<ul>
+  <li>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="inputStudentid">Student Name</mat-label>
+        <mat-select [(ngModel)]="studentId">
+          <mat-option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+  </li>
 
+  <li>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="inputNote">Note</mat-label>
+      <textarea matInput rows="3" cols="50" placeholder="Anything of note student did" [(ngModel)]= "note"></textarea>
+    </mat-form-field>
+  </li>
 
-  <fieldset>
-    <legend>Register Grade</legend>
-    <ul>
-      <li>
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label for="inputStudentid">Student Name</mat-label>
-            <mat-select [(ngModel)]="studentId">
-              <mat-option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</mat-option>
-            </mat-select>
-        </mat-form-field>
-      </li>
+  <li>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label for="behavior-type">Behavior </mat-label>
+      <mat-select [(ngModel)]= "behavior">
+        <mat-option value="EXCELLENT">Excellent</mat-option>
+        <mat-option value="SATISFACTORY">Satisfactory</mat-option>
+        <mat-option value="POOR">Poor</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </li>
 
-      <li>
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label for="inputNote">Note</mat-label>
-          <textarea matInput rows="3" cols="50" placeholder="Anything of note student did" [(ngModel)]= "note"></textarea>
-        </mat-form-field>
-      </li>
+  <li>
+    <button mat-raised-button (click)="register()">Register Grade</button>
+  </li>
 
-      <li>
-        <mat-form-field class="example-full-width" appearance="fill">
-          <mat-label for="behavior-type">Behavior </mat-label>
-          <mat-select [(ngModel)]= "behavior">
-            <mat-option value="EXCELLENT">Excellent</mat-option>
-            <mat-option value="SATISFACTORY">Satisfactory</mat-option>
-            <mat-option value="POOR">Poor</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </li>
-
-      <li>
-        <button mat-raised-button (click)="register()">Register Grade</button>
-      </li>
-
-    </ul>
-      
-    
-      
-    
-    
-  </fieldset>
-
-
-  
-
-<h1>Grade Registered with ID {{savedId}}</h1>
+</ul>
+</fieldset>
 

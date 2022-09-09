@@ -20,7 +20,6 @@ export class GraderegistrationformComponent implements OnInit {
   timeReported: number = 0;
   note:string = "";
   behavior: string = "";
-  savedId:number = 0;
   students:Student[] = [];
 
 
@@ -37,7 +36,7 @@ export class GraderegistrationformComponent implements OnInit {
     console.log(this.timeReported);
     const grade: Grade = {gId:0,sId:this.studentId,timeReported:this.timeReported, note:this.note , behavior:this.behavior};
     const savedGrade:Grade = await this.gradeService.registerGrade(grade);
-    this.savedId = savedGrade.gId;
+    alert('Grade has been added');
 
     this.studentId = -1;
     this.note = "";
