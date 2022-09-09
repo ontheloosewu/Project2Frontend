@@ -1,6 +1,8 @@
+import { JsonPipe } from '@angular/common';
 import { HttpClient, HttpHeaders, HttpParamsOptions } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom, observable, Observable } from 'rxjs';
+import { AppUser } from '../models/appuser';
 import { Student } from '../models/student';
 
 @Injectable({
@@ -23,13 +25,17 @@ export class StudentUtilService {
     // gets user info from local storage if it exists. otherwise returns empty string
     getJWT():string 
     {
-      let jwt = localStorage.getItem("userInfo");
-      return jwt ? jwt:"";
+      let jwt = localStorage.getItem("userJWT");
 
+      if (jwt === null)
+        return "";
+        
+      return jwt;
     }
 
    async registerStudent(student:Student) : Promise<Student>
     {
+      console.log("registerStudent(): " + this.httpOptions.headers);
       const observable = this.http.post<Student>(`${this.baseRoute}/students`, JSON.stringify(student), this.httpOptions);
        return await firstValueFrom(observable);
     }
