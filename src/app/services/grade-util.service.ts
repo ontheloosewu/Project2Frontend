@@ -11,6 +11,7 @@ export class GradeUtilService {
 
   constructor(private http: HttpClient) { };
 
+  private baseRoute : string = "https://daycare-app.agreeablemushroom-6e40775d.eastus.azurecontainerapps.io";
   private httpOptions = 
   {
     headers: new HttpHeaders({
@@ -32,19 +33,19 @@ export class GradeUtilService {
 
   async registerGrade(grade:Grade):Promise<Grade>{
 
-    const observable = this.http.post<Grade>("http://localhost:8080/grades",grade, this.httpOptions)
+    const observable = this.http.post<Grade>(`${this.baseRoute}/grades`,grade, this.httpOptions)
     const savedGrade = await firstValueFrom(observable);
     return savedGrade;
 
   }
 
   async deleteGradeById(id: number): Promise<String>{
-    const observable = this.http.delete<string>(`http://localhost:8080/grades/${id}`, this.httpOptions);
+    const observable = this.http.delete<string>(`${this.baseRoute}/grades/${id}`, this.httpOptions);
     return await firstValueFrom(observable);
   }
 
   async getAllGradesByStudentId(id:number):Promise<Grade[]>{
-    const observable = this.http.get<Grade[]>(`http://localhost:8080/grades/${id}`, this.httpOptions);
+    const observable = this.http.get<Grade[]>(`${this.baseRoute}/grades/${id}`, this.httpOptions);
     const grades = await firstValueFrom(observable);
     return grades;
   }

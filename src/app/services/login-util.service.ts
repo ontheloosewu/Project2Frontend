@@ -13,7 +13,7 @@ export class LoginUtilService {
   async validateLogin(username:String, password:String): Promise<AppUser>{
     const credentials = {username: username, password: password};
     try{
-      const observable = this.http.post<AppUser>("http://localhost:8080/login", credentials);
+      const observable = this.http.post<AppUser>("https://daycare-app.agreeablemushroom-6e40775d.eastus.azurecontainerapps.io/login", credentials);
       const jwt = await firstValueFrom(observable);
       return jwt;
     } catch (error){
