@@ -1,4 +1,16 @@
 div{
     text-align: center;
-    margin-top: 200px;
+    margin-top: 300px;
 }
+li{
+    font-size: 2em;
+}
+
+input{
+    margin-left: 10px;
+}
+
+button{
+    font-size: 3em;
+}
+

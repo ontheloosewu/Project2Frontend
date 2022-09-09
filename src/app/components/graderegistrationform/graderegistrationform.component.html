@@ -8,8 +8,10 @@
       <select [(ngModel)]="studentId"><option *ngFor = "let student of students" [value]="student.sId">{{student.firstName}} {{student.lastName}}</option></select>
     </div>
     <div>
+      <div>
       <label for="inputNote">Note</label>
-      <textarea rows="6" cols="50" placeholder="Anything of note student did" [(ngModel)]= "note"></textarea>
+    </div>
+      <textarea rows="3" cols="50" placeholder="Anything of note student did" [(ngModel)]= "note"></textarea>
     </div>
     <div>
     <label for="behavior-type">Behavior </label>
@@ -24,5 +26,5 @@
 
   <button (click)="register()">Register Grade</button>
 
-<h4>Grade Registered with ID {{savedId}}</h4>
+<h1>Grade Registered with ID {{savedId}}</h1>
 

@@ -1,9 +1,17 @@
 <div>
-<label for="">Username</label>
-<input type="text" [(ngModel)]="username">
 
-<label for="">Password</label>
-<input type="password" [(ngModel)]="password">
+    <h1>Sign In</h1>
+
+    <ul>
+        <li>
+            <label for="">Username</label>
+            <input type="text" [(ngModel)]="username">
+        </li>
+        <li>
+            <label for="">Password</label>
+            <input type="password" [(ngModel)]="password">
+        </li>
+    </ul>
 
 <button (click) = "loginUser()">Login</button>
 </div>

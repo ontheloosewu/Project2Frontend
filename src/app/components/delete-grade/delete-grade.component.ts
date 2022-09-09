@@ -9,12 +9,15 @@ import { GradeUtilService } from 'src/app/services/grade-util.service';
   templateUrl: './delete-grade.component.html',
   styleUrls: ['./delete-grade.component.css']
 })
-export class DeleteGradeComponent{
+export class DeleteGradeComponent implements OnInit{
 
 
   constructor(private gradeService:GradeUtilService) {};
 
   id:number = 0;
+
+  ngOnInit(): void {
+  }
 
   async deleteGrade(){
     const deleteGrades = await this.gradeService.deleteGradeById(this.id);
