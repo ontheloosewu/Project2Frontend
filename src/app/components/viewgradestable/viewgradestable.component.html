@@ -16,7 +16,7 @@
 
 </ul>
 
-<table>
+<table class="styled-table">
   <thead>
     <tr>
       <th>Date</th>
@@ -27,7 +27,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor= "let g of grades">
+    <tr class="active-row" *ngFor= "let g of grades">
       <td>{{g.timeReported | epoch}}</td>
       <td>{{g.note}}</td>
       <td>{{g.behavior}}</td>

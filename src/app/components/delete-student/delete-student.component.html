@@ -1,6 +1,6 @@
 <div>
     <h1>Delete Students</h1>
-    <table>
+    <table class="styled-table">
         <thead>
             <tr>
                 <th>First Name</th>
@@ -10,7 +10,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor = "let s of students">
+            <tr class="active-row" *ngFor = "let s of students">
                 <td>{{s.firstName}}</td>
                 <td>{{s.lastName}}</td>
                 <td>{{s.guardianUsername}}</td>

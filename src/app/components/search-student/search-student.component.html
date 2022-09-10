@@ -29,7 +29,7 @@
 
         <ng-template #filtered_list>
 
-            <table>
+            <table class="styled-table">
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -38,7 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let t of filtered">
+                    <tr class="active-row" *ngFor="let t of filtered">
                         <td>{{t.firstName}}</td>
                         <td>{{t.lastName}}</td>
                         <td>{{t.guardianUsername}}</td>
@@ -49,7 +49,7 @@
         </ng-template>
 
         <ng-template #all>
-            <table>
+            <table class="styled-table">
                 <thead>
                     <tr>
                         <th>First Name</th>
@@ -58,7 +58,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let t of students">
+                    <tr class="active-row" *ngFor="let t of students">
                         <td>{{t.firstName}}</td>
                         <td>{{t.lastName}}</td>
                         <td>{{t.guardianUsername}}</td>
