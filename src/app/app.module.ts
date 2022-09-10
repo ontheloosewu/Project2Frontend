@@ -25,6 +25,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { EpochPipe } from './pipes/epoch.pipe';
 import { LogoutComponent } from './components/logout/logout.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { LogoutComponent } from './components/logout/logout.component';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
 
   ],
   providers: [HttpClient, StudentUtilService, GradeUtilService, LoginUtilService],

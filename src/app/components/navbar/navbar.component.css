@@ -34,6 +34,8 @@ nav {position:fixed;
 	min-width:200px;
 	z-index: 1001;
 	display: none;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-bottom: #fff solid;
 	
 }
 nav ul{padding: 0;
@@ -63,29 +65,26 @@ display:block;}
             display: inline-block;
             position:absolute;
             right:0;
-            
-            
-    }
+            }
     nav ul {list-style-type: none;
             width:100%;
             height:auto;
             padding: 0;
             margin:0;
-            
             }
-    nav ul li {display: inline;
-            
-            text-align: center;
-            width:100%;
-            height: auto;
-            padding: 10px;
-            color: #8797af;
-            background-color: #2c1320;
 
-            transition-property: background-color;
-            transition-duration: 0.5s;
-        
-    }
+    nav ul li { 
+                display: inline;    
+                text-align: center;
+                width:100%;
+                height: auto;
+                padding: 10px;
+                color: #8797af;
+                background-color: #2c1320;
+                transition-property: background-color;
+                transition-duration: 0.5s;
+        }
+
     nav ul li a{
                 font-size: 0.7em;
                 display:inline-block;    
