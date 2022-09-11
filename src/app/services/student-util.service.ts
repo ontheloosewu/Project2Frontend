@@ -21,7 +21,7 @@ export class StudentUtilService {
         'auth' : ''
       })
     }
-    
+
     updateJWT(): void
     {
       let jwt = localStorage.getItem("userJWT");
