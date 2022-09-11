@@ -25,7 +25,9 @@ export class GradeUtilService {
     let jwt = localStorage.getItem("userJWT");
 
     if (jwt === null)
+    {
       return;
+    }
       
       this.httpOptions.headers = this.httpOptions.headers.set('auth', jwt);
   }
