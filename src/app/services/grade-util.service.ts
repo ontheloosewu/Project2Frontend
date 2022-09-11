@@ -9,30 +9,32 @@ import { Grade } from '../models/grade';
 })
 export class GradeUtilService {
 
-  constructor(private http: HttpClient) { };
+  constructor(private http: HttpClient) {};
 
   private baseRoute : string = "https://daycare-app.agreeablemushroom-6e40775d.eastus.azurecontainerapps.io";
   private httpOptions = 
   {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'auth' : this.getJWT()
+      'auth' : ''
     })
   }
 
-  // gets user info from local storage if it exists. otherwise returns empty string
-  getJWT():string 
+  updateJWT(): void
   {
     let jwt = localStorage.getItem("userJWT");
 
     if (jwt === null)
-      return "";
+    {
+      return;
+    }
       
-    return jwt;
+      this.httpOptions.headers = this.httpOptions.headers.set('auth', jwt);
   }
 
   async registerGrade(grade:Grade):Promise<Grade>{
 
+    this.updateJWT();
     const observable = this.http.post<Grade>(`${this.baseRoute}/grades`,grade, this.httpOptions)
     const savedGrade = await firstValueFrom(observable);
     return savedGrade;
@@ -40,11 +42,13 @@ export class GradeUtilService {
   }
 
   async deleteGradeById(id: number): Promise<String>{
+    this.updateJWT();
     const observable = this.http.delete<string>(`${this.baseRoute}/grades/${id}`, this.httpOptions);
     return await firstValueFrom(observable);
   }
 
   async getAllGradesByStudentId(id:number):Promise<Grade[]>{
+    this.updateJWT();
     const observable = this.http.get<Grade[]>(`${this.baseRoute}/grades/${id}`, this.httpOptions);
     const grades = await firstValueFrom(observable);
     return grades;
