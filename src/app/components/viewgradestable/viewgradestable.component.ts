@@ -16,11 +16,21 @@ export class ViewgradestableComponent implements OnInit {
   id:number = 0;
   grades:Grade[] = [];
   students:Student[] = [];
+  public role :string = "";
   ngOnInit(): void {
+    this.checkRole();
     (async () => {
       this.students = await this.studentService.getAllStudents();
     })();
 
+  }
+
+
+  checkRole(): void
+  {
+    let r = localStorage.getItem("userRole");
+
+    this.role = r?r : "";
   }
 
   async retrieveGrades(){
