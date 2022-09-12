@@ -31,7 +31,7 @@
       <td>{{g.timeReported | epoch}}</td>
       <td>{{g.note}}</td>
       <td>{{g.behavior}}</td>
-      <td><button *ngIf="this.role === 'teacher'" mat-raised-button (click)="deleteGrade(g.gId)">Delete</button></td>
+      <td *ngIf="this.role === 'teacher'"><button *ngIf="this.role === 'teacher'" mat-raised-button (click)="deleteGrade(g.gId)">Delete</button></td>
     </tr>
   </tbody>
 </table>
